@@ -28,7 +28,13 @@ namespace ApiCro
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
             .UseStartup<Startup>()
+            .UseIISIntegration()
             .Build();
+
+
+       
+
+
     }
     //public static IWebHost BuildWebHost(string[] args) =>
     //    WebHost.CreateDefaultBuilder(args)

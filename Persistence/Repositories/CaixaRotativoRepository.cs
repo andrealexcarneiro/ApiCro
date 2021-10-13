@@ -90,23 +90,14 @@ namespace ApiCro.Persistence.Repositories
 
             {
 
-
-
-              
-
-
-
                 var resultado = contexto.caixaRotativo
-                                            .Where(m => m.tUsuarioID == Id)
+                                            //.Where(m => m.tUsuarioID == Id)
                                             .GroupBy(m => m.tCaixaCabId)
 
                                             .Select(m => new CaixaRotativo
                                             {
-                                                IdCaixaRotativo = m.Key,
-                                               
-                                               
+                                                tCaixaCabId = m.Key,
                                                 ValorDespesa = m.Sum(m => m.ValorDespesa)
-
                                             }
                                         ).ToList();
 
@@ -125,28 +116,56 @@ namespace ApiCro.Persistence.Repositories
         {
             using (var ctx = new AppDbContext())
             {
-
-                var Caixa = new CaixaRotativo
+                if (caixaRotativo.ImagemTitulo == null)
                 {
-                    IdCaixaRotativo = caixaRotativo.IdCaixaRotativo,
-                    Obra = caixaRotativo.Obra,
-                    Insumo = caixaRotativo.Insumo,
-                    TipoInsumo = caixaRotativo.TipoInsumo,
-                    ValorDespesa = caixaRotativo.ValorDespesa,
-                    DataDespesa = caixaRotativo.DataDespesa,
-                    Nominal = caixaRotativo.Nominal,
-                    Fornecedor = caixaRotativo.Fornecedor,
-                    CpfCnpjNominal = caixaRotativo.CpfCnpjNominal,
-                    CpfCnpjFornecedor = caixaRotativo.CpfCnpjFornecedor,
-                    tUsuarioID = caixaRotativo.tUsuarioID,
-                    Obs = caixaRotativo.Obs,
-                    ImagemTitulo = caixaRotativo.ImagemTitulo,
-                    ImagemDados = caixaRotativo.ImagemDados,
-                    tCaixaCabId = caixaRotativo.tCaixaCabId
+                    var Caixa = new CaixaRotativo
+                    {
 
-                };
+                        IdCaixaRotativo = caixaRotativo.IdCaixaRotativo,
+                        Obra = caixaRotativo.Obra,
+                        Insumo = caixaRotativo.Insumo,
+                        TipoInsumo = caixaRotativo.TipoInsumo,
+                        ValorDespesa = caixaRotativo.ValorDespesa,
+                        DataDespesa = caixaRotativo.DataDespesa,
+                        Nominal = caixaRotativo.Nominal,
+                        Fornecedor = caixaRotativo.Fornecedor,
+                        CpfCnpjNominal = caixaRotativo.CpfCnpjNominal,
+                        CpfCnpjFornecedor = caixaRotativo.CpfCnpjFornecedor,
+                        tUsuarioID = caixaRotativo.tUsuarioID,
+                        Obs = caixaRotativo.Obs,
+                        tCaixaCabId = caixaRotativo.tCaixaCabId
+                         
+                    };
+                        ctx.caixaRotativo.Update(Caixa);
+                }
+                else
+                {
+                    var Caixa = new CaixaRotativo
+                    {
 
-                ctx.caixaRotativo.Update(Caixa);
+                        IdCaixaRotativo = caixaRotativo.IdCaixaRotativo,
+                        Obra = caixaRotativo.Obra,
+                        Insumo = caixaRotativo.Insumo,
+                        TipoInsumo = caixaRotativo.TipoInsumo,
+                        ValorDespesa = caixaRotativo.ValorDespesa,
+                        DataDespesa = caixaRotativo.DataDespesa,
+                        Nominal = caixaRotativo.Nominal,
+                        Fornecedor = caixaRotativo.Fornecedor,
+                        CpfCnpjNominal = caixaRotativo.CpfCnpjNominal,
+                        CpfCnpjFornecedor = caixaRotativo.CpfCnpjFornecedor,
+                        tUsuarioID = caixaRotativo.tUsuarioID,
+                        Obs = caixaRotativo.Obs,
+                        ImagemTitulo = caixaRotativo.ImagemTitulo,
+                        ImagemDados = caixaRotativo.ImagemDados,
+                        tCaixaCabId = caixaRotativo.tCaixaCabId
+
+                    };
+                    ctx.caixaRotativo.Update(Caixa);
+                }
+
+               
+
+               
                 ctx.SaveChanges();
             }
         }

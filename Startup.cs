@@ -14,6 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using ApiSistema.Persistence.Repositories;
+using ApiSistema.Domain.Services;
 
 namespace ApiCro
 {
@@ -67,17 +69,10 @@ namespace ApiCro
 
 
 
-            services.AddScoped<ICaixaCabRepository, CaixaCabRepository>();
-            services.AddScoped<ICaixaCabService, CaixaCabService>();
+          
 
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IUsuarioServices, UsuarioServices>();
-
-            services.AddScoped<ICaixaRotativoServices, CaixaRotativoService>();
-            services.AddScoped<ICaixaRotativoRepository, CaixaRotativoRepository>();
-
-            services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
-            services.AddScoped<IDepartamentoService, DepartamentoServices>();
 
             services.AddScoped<ISegurancaRepository, SegurancaRepository>();
             services.AddScoped<ISegurancaService, SegurancaServices>();
@@ -85,14 +80,10 @@ namespace ApiCro
             services.AddScoped<ISegurancaItensRepository, SegurancaItensRepository>();
             services.AddScoped<ISegurancaItensService, SegurancaItensService>();
 
-            services.AddScoped<ICadastroBIRepository, CadBIRepository>();
-            services.AddScoped<ICadBIService, CadBIService>();
+            services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+            services.AddScoped<IEmpresaService, EmpresaService>();
 
-            services.AddScoped<IPermissaoRepository, PermissoesRepository>();
-            services.AddScoped<IPermissoesService, PermissoesService>();
 
-            services.AddScoped<IStatusRepository, StatusRepository>();
-            services.AddScoped<IStatusService, StatusService>();
 
 
             //services.AddMvcCore(options => options.EnableEndpointRouting = false).AddRazorViewEngine();

@@ -4,6 +4,7 @@ using ApiCro.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
+using ApiSistema.Models;
 
 namespace ApiCro.Persistence.Context
 {
@@ -17,27 +18,15 @@ namespace ApiCro.Persistence.Context
         { }
       
         public DbSet<Usuario> usuarios { get; set; }
-        public DbSet<Departamentos> departamento { get; set; }
-        public DbSet<CaixaRotativo> caixaRotativo { get; set; }
-        public DbSet<CaixaCab> caixaCabs { get; set; }
-        public DbSet<CaixaItens> caixaItens { get; set; }
         public DbSet<Imagem> Imagens { get; set; }
         public DbSet<Seguranca> segurancas { get; set; }
-        public DbSet<Permissoes> permissao { get; set; }
-        public DbSet<CadastroBI> cadastroBIs { get; set; }
-        public DbSet<SegurancaItens> SegurancaItens { get; set; }
-        public DbSet<Status> Statuses { get; set; }
+       public DbSet<SegurancaItens> SegurancaItens { get; set; }
+        public DbSet<Empresa> empresas { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //define o provedor do BD e a string de conexão
-            optionsBuilder.UseSqlServer("Data Source=BI03;Initial Catalog=BDTencel;Integrated Security=False;User ID=sa;Password=Ju250298@");
-            //exibe as consultas SQL no console
-            //optionsBuilder
-            //    .EnableSensitiveDataLogging(true)
-            //    .UseLoggerFactory(new LoggerFactory().AddConsole((category, level) =>
-            //    level == LogLevel.Information &&
-            //    category == DbLoggerCategory.Database.Command.Name, true));
+            optionsBuilder.UseSqlServer("Data Source=BI03;Initial Catalog=BD;Integrated Security=False;User ID=sa;Password=Ju250298@");
         }
        
 
@@ -81,7 +70,7 @@ namespace ApiCro.Persistence.Context
         
         private string stringConexao()
         {
-            string strCon = "Data Source=BI03;Initial Catalog=BDTencel;Integrated Security=False;User ID=sa;Password=Ju250298@";
+            string strCon = "Data Source=BI03;Initial Catalog=BD;Integrated Security=False;User ID=sa;Password=Ju250298@";
             // string strCon = "Server=tcp:canaldevcore.database.windows.net,1433;Initial Catalog=dev;Persist Security Info=False;User ID=valdir;Password=@Beatriz222;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             return strCon;
         }

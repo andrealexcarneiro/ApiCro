@@ -45,20 +45,20 @@ namespace ApiCro.Persistence.Repositories
             {
 
                 var ListarFuncionarios = (from func in contexto.usuarios
-                                            join dep in contexto.departamento on func.DeptoID equals dep.ID
-                                            orderby func.Nome 
-                                            select new Usuario
-                                            {
-                                                ID = func.ID,
-                                                DeptoID = func.DeptoID,
-                                                Email = func.Email,
-                                                Nome = func.Nome,
-                                                Senha = func.Senha,
-                                                Master = func.Master,
-                                                Inativo = func.Inativo,
-                                                //Departamentos = dep.Departamento
-                                                //};
-                                            }).ToList();
+                                              //                            join dep in contexto.departamento on func.DeptoID equals dep.ID
+                                          orderby func.Nome
+                                          select new Usuario
+                                          {
+                                              ID = func.ID,
+                                              DeptoID = func.DeptoID,
+                                              Email = func.Email,
+                                              Nome = func.Nome,
+                                              Senha = func.Senha,
+                                              Master = func.Master,
+                                              Inativo = func.Inativo,
+                                              //Departamentos = dep.Departamento
+                                              //};
+                                          }).ToList();
 
                 return (IEnumerable<Usuario>)ListarFuncionarios;
             }
@@ -71,7 +71,7 @@ namespace ApiCro.Persistence.Repositories
             {
 
                 var ListarFuncionariosID = (from func in contexto.usuarios
-                                            join dep in contexto.departamento on func.DeptoID equals dep.ID
+                                            //join dep in contexto.departamento on func.DeptoID equals dep.ID
                                             where func.ID == id
                                             select new Usuario
                                             {
@@ -137,7 +137,7 @@ namespace ApiCro.Persistence.Repositories
             {
                 string Criterioi = criterio.Trim();
                 var ListarFuncionariosID = (from func in contexto.usuarios
-                                            join dep in contexto.departamento on func.DeptoID equals dep.ID
+                                            //join dep in contexto.departamento on func.DeptoID equals dep.ID
                                             where func.Nome == "" + Criterioi + ""
                                             select new Usuario
                                             {

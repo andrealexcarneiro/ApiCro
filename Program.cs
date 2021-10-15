@@ -1,4 +1,4 @@
-using ApiCro.Persistence.Context;
+using ApiSistema.Persistence.Context;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiCro
+namespace ApiSistema
 {
     public class Program
     {

@@ -1,12 +1,12 @@
-﻿using ApiCro.Models;
-using ApiCro.Persistence.Repositories;
-using ApiCro.Repositories;
+﻿using ApiSistema.Models;
+using ApiSistema.Persistence.Repositories;
+using ApiSistema.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiCro.Domain.Services
+namespace ApiSistema.Domain.Services
 {
     public class SegurancaItensService : ISegurancaItensService
     {

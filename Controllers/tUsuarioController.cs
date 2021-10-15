@@ -1,4 +1,4 @@
-﻿using ApiCro.Models;
+﻿using ApiSistema.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using ApiCro.Persistence.Context;
-using ApiCro.Domain.Services;
+using ApiSistema.Persistence.Context;
+using ApiSistema.Domain.Services;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace ApiCro.Controllers
+namespace ApiSistema.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

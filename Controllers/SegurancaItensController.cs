@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ApiCro.Models;
+using ApiSistema.Models;
 using Microsoft.AspNetCore.Authorization;
-using ApiCro.Persistence.Context;
-using ApiCro.Domain.Services;
+using ApiSistema.Persistence.Context;
+using ApiSistema.Domain.Services;
 
-namespace ApiCro.Controllers
+namespace ApiSistema.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

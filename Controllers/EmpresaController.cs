@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ApiCro.Models;
-using Microsoft.AspNetCore.Authorization;
-using ApiCro.Persistence.Context;
-using ApiCro.Domain.Services;
-using ApiSistema.Domain.Services;
 using ApiSistema.Models;
+using Microsoft.AspNetCore.Authorization;
+using ApiSistema.Persistence.Context;
+using ApiSistema.Domain.Services;
+
 
 namespace ApiSistema.Controllers
 {

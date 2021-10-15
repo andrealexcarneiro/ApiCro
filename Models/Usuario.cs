@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace ApiCro.Models
+namespace ApiSistema.Models
 {
     [Table("tUsuario")]
     public class Usuario

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ApiCro.Models;
-using ApiCro.Persistence.Context;
+using ApiSistema.Models;
+using ApiSistema.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiCro.Services
+namespace ApiSistema.Services
 {
     public class UsuariosSeguranca
     {

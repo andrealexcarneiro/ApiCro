@@ -1,10 +1,10 @@
 
-using ApiCro.Interfaces;
-using ApiCro.Models;
-using ApiCro.Persistence.Context;
-using ApiCro.Persistence.Repositories;
-using ApiCro.Repositories;
-using ApiCro.Domain.Services;
+using ApiSistema.Interfaces;
+using ApiSistema.Models;
+using ApiSistema.Persistence.Context;
+using ApiSistema.Persistence.Repositories;
+using ApiSistema.Repositories;
+using ApiSistema.Domain.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,7 +17,7 @@ using System.Text;
 using ApiSistema.Persistence.Repositories;
 using ApiSistema.Domain.Services;
 
-namespace ApiCro
+namespace ApiSistema
 {
     public class Startup
     {
@@ -65,7 +65,7 @@ namespace ApiCro
             services.AddDbContext<AppDbContext>(opt =>
                                                opt.UseInMemoryDatabase("FuncionarioList"));
             //services.AddDbContext<AppDbContext>(opt =>
-            //                                  opt.UseInMemoryDatabase("ApiCro-api-in-memory"));
+            //                                  opt.UseInMemoryDatabase("ApiSistema-api-in-memory"));
 
 
 
@@ -83,13 +83,18 @@ namespace ApiCro
             services.AddScoped<IEmpresaRepository, EmpresaRepository>();
             services.AddScoped<IEmpresaService, EmpresaService>();
 
+            services.AddScoped<IAtividadeRepository, AtividadeRepository>();
+            services.AddScoped<IAtividadeService, AtividadeService>();
+
+            services.AddScoped<ICnaeRepository, CnaeRepository>();
+            services.AddScoped<ICnaeService, CnaeService>();
 
 
 
             //services.AddMvcCore(options => options.EnableEndpointRouting = false).AddRazorViewEngine();
             //services.AddSwaggerGen(c =>
             //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiCro", Version = "v1" });
+            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiSistema", Version = "v1" });
             //});
         }
 
@@ -100,7 +105,7 @@ namespace ApiCro
             {
                 app.UseDeveloperExceptionPage();
                 //app.UseSwagger();
-                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiCro v1"));
+                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiSistema v1"));
             }
 
             

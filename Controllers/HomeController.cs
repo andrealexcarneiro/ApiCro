@@ -1,13 +1,13 @@
-﻿using ApiCro.Models;
-using ApiCro.Repositories;
-using ApiCro.Services;
+﻿using ApiSistema.Models;
+using ApiSistema.Repositories;
+using ApiSistema.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
 
-namespace ApiCro.Controllers
+namespace ApiSistema.Controllers
 {
   
     [Route("v1/account")]

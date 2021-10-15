@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApiSistema.Models
 {
-    [Table("Empresa")]
+    [Table("tEmpresa")]
     public class Empresa
     {
         [Key]
@@ -38,7 +38,7 @@ namespace ApiSistema.Models
         public bool EmpresaGrupo { get; set; }
         public bool Selecionada { get; set; }
         public bool Administradora { get; set; }
-        public bool UsuarioInclusao { get; set; }
+        public int UsuarioInclusao { get; set; }
         public DateTime DataInclusao { get; set; }
         public int UsuarioAlteracao { get; set; }
         public DateTime DataAlteracao { get; set; }

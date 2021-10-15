@@ -1,5 +1,5 @@
-﻿using ApiCro.Persistence.Context;
-using ApiCro.Persistence.Repositories;
+﻿using ApiSistema.Persistence.Context;
+using ApiSistema.Persistence.Repositories;
 using ApiSistema.Models;
 using Microsoft.EntityFrameworkCore;
 using System;

@@ -1,12 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ApiCro.Models;
-using ApiCro.Repositories;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System;
+
+
 using ApiSistema.Models;
 
-namespace ApiCro.Persistence.Context
+namespace ApiSistema.Persistence.Context
 {
     public class AppDbContext : DbContext 
     {
@@ -16,13 +13,14 @@ namespace ApiCro.Persistence.Context
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }
-      
+
         public DbSet<Usuario> usuarios { get; set; }
         public DbSet<Imagem> Imagens { get; set; }
         public DbSet<Seguranca> segurancas { get; set; }
-       public DbSet<SegurancaItens> SegurancaItens { get; set; }
+        public DbSet<SegurancaItens> SegurancaItens { get; set; }
         public DbSet<Empresa> empresas { get; set; }
-
+        public DbSet<AtividadeEmpresa> atividades { get; set; }
+        public DbSet<Cnae> cnaes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

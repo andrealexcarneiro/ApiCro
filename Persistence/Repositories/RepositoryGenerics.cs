@@ -1,13 +1,13 @@
-﻿using ApiCro.Interfaces;
-using ApiCro.Models;
-using ApiCro.Persistence.Context;
+﻿using ApiSistema.Interfaces;
+using ApiSistema.Models;
+using ApiSistema.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiCro.Repositories
+namespace ApiSistema.Repositories
 {
     public class RepositoryGenerics<T> : IGeneric<T> where T : class
 

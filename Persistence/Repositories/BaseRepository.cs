@@ -1,11 +1,11 @@
 ﻿
-using ApiCro.Persistence.Context;
+using ApiSistema.Persistence.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiCro.Persistence.Repositories
+namespace ApiSistema.Persistence.Repositories
 {
     public class BaseRepository
     {

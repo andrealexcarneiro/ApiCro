@@ -1,12 +1,12 @@
-﻿using ApiCro.Models;
-using ApiCro.Persistence.Context;
+﻿using ApiSistema.Models;
+using ApiSistema.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiCro.Persistence.Repositories
+namespace ApiSistema.Persistence.Repositories
 {
     public class SegurancaItensRepository : BaseRepository, ISegurancaItensRepository
     {

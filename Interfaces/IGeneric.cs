@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiCro.Interfaces
+namespace ApiSistema.Interfaces
 {
     public interface IGeneric<T> where T : class
     {

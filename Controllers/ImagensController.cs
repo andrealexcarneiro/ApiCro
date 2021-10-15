@@ -1,12 +1,12 @@
-﻿using ApiCro.Models;
-using ApiCro.Persistence.Context;
+﻿using ApiSistema.Models;
+using ApiSistema.Persistence.Context;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace ApiCro.Controllers
+namespace ApiSistema.Controllers
 {
     public class ImagensController : Controller
     {

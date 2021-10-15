@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ApiCro.Models
+namespace ApiSistema.Models
 {
     [Table("tSegurancaItens")]
     public class SegurancaItens

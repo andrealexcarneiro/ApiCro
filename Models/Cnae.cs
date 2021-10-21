@@ -9,7 +9,6 @@ namespace ApiSistema.Models
     {
         [Key]
         public int ID { get; set; }
-        public int tCNAE_IDPai { get; set; }
         public string Secao { get; set; }
         public string Divisao { get; set; }
         public string Grupo { get; set; }

@@ -21,10 +21,14 @@ namespace ApiSistema.Persistence.Context
         public DbSet<Empresa> empresas { get; set; }
         public DbSet<AtividadeEmpresa> atividades { get; set; }
         public DbSet<Cnae> cnaes { get; set; }
+        public DbSet<Cidades> cidade { get; set; }
+        public DbSet<Cliente> clientes { get; set; }
+        public DbSet<UF> uFs { get; set; }
+        public DbSet<NfSaida> nfSaidas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=BI03;Initial Catalog=BD;Integrated Security=False;User ID=sa;Password=Ju250298@");
+            optionsBuilder.UseSqlServer("Data Source=BI03;Initial Catalog=BDWeb;Integrated Security=False;User ID=sa;Password=Ju250298@");
         }
        
 
@@ -68,7 +72,7 @@ namespace ApiSistema.Persistence.Context
         
         private string stringConexao()
         {
-            string strCon = "Data Source=BI03;Initial Catalog=BD;Integrated Security=False;User ID=sa;Password=Ju250298@";
+            string strCon = "Data Source=BI03;Initial Catalog=BDWeb;Integrated Security=False;User ID=sa;Password=Ju250298@";
             // string strCon = "Server=tcp:canaldevcore.database.windows.net,1433;Initial Catalog=dev;Persist Security Info=False;User ID=valdir;Password=@Beatriz222;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             return strCon;
         }
